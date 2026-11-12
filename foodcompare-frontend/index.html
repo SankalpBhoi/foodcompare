@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FoodCompare helps you compare food prices, delivery fees and offers before you order.">
+  <title>FoodCompare — Find the better food deal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement"><span><i class="bi bi-stars"></i> Stop overpaying for your favourites.</span> Compare the total bill before you order.</div>
+  <header class="header" id="top">
+    <nav class="nav container">
+      <a class="brand" href="#top" aria-label="FoodCompare home"><span class="brand-icon"><i class="bi bi-basket2-fill"></i></span>food<span>compare</span></a>
+      <div class="nav-location" id="locationTrigger" role="button" tabindex="0" aria-label="Change delivery location">
+        <i class="bi bi-geo-alt"></i><span><small>DELIVERING TO</small><strong id="locationLabel">Choose your location</strong></span><i class="bi bi-chevron-down"></i>
+      </div>
+      <button class="mobile-menu" id="mobileMenu" aria-label="Open menu"><i class="bi bi-list"></i></button>
+      <div class="nav-links" id="navLinks"><a href="#features">Features</a><a href="#compare">Compare prices</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a class="nav-cta" href="#contact">Get started <i class="bi bi-arrow-up-right"></i></a></div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-shape shape-one"></div><div class="hero-shape shape-two"></div>
+      <div class="container hero-layout">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="live-dot"></span> YOUR FOOD. YOUR CHOICE. THE BEST PRICE.</div>
+          <h1>Love the food.<br>Not the <span>extra cost.</span></h1>
+          <p>Compare food prices and coupon offers for free. Upgrade to Plus to compare delivery fees, platform fees, the full bill and your savings history.</p>
+          <div class="hero-buttons"><a class="button button-dark" href="#compare">Compare food prices <i class="bi bi-arrow-right"></i></a><button class="button button-light" id="heroLocationBtn"><i class="bi bi-geo-alt"></i> Set my location</button></div>
+          <div class="hero-trust"><div class="trust-avatars"><span>🍕</span><span>🍔</span><span>🥗</span></div><div><strong>One search. More savings.</strong><small>Compare the final amount, not just menu prices.</small></div></div>
+        </div>
+        <div class="hero-art reveal">
+          <div class="hero-photo-wrap"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1000&auto=format&fit=crop&q=85" alt="Freshly baked pizza with vegetables"></div>
+          <div class="deal-float"><span class="deal-icon"><i class="bi bi-tag-fill"></i></span><div><small>YOU COULD SAVE</small><strong>₹85.00</strong><em>by comparing first</em></div></div>
+          <div class="platform-float"><span class="platform-dot swiggy-dot">S</span><span class="platform-dot zomato-dot">Z</span><span class="platform-dot magic-dot">M</span><div><strong>Multiple platforms</strong><small>One simple comparison</small></div></div>
+          <div class="hero-sparkle sparkle-a">✦</div><div class="hero-sparkle sparkle-b">✳</div>
+        </div>
+      </div>
+      <div class="container platform-strip"><span>COMPARE ACROSS AVAILABLE PLATFORMS</span><div class="platform-wordmarks"><b class="swiggy-word">swiggy</b><b class="zomato-word">zomato</b><b class="magic-word">magicpin</b><b class="eatsure-word">eat<span>sure</span></b></div></div>
+    </section>
+
+
+    <section class="features-section section" id="features">
+      <div class="container">
+        <div class="center-heading"><div class="eyebrow">BUILT FOR SMARTER FOOD ORDERS</div><h2>Everything you need to <span>choose better.</span></h2><p>Useful tools to make comparing your next meal simple.</p></div>
+        <div class="features-grid">
+          <article class="feature-card"><div class="feature-icon feature-green"><i class="bi bi-currency-rupee"></i></div><h3>Real bill comparison</h3><p>Compare food price, delivery fee, platform fee and discounts together instead of looking at menu prices alone.</p></article>
+          <article class="feature-card"><div class="feature-icon feature-orange"><i class="bi bi-ticket-perforated"></i></div><h3>Coupon finder</h3><p>See sample coupon offers and understand how discounts change the final amount you may pay.</p></article>
+          <article class="feature-card"><div class="feature-icon feature-purple"><i class="bi bi-geo-alt"></i></div><h3>Location-aware discovery</h3><p>Set your area automatically or manually to personalise the restaurants and services you want to compare.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="compare-section section" id="compare">
+      <div class="container">
+        <div class="section-top">
+          <div><div class="eyebrow">THE SMART WAY TO ORDER</div><h2>Find your food.<br><span>Compare the real price.</span></h2><p>Search a dish or restaurant to see sample offers across delivery platforms.</p></div>
+          <div class="data-note"><i class="bi bi-info-circle"></i><span>Demo prices for preview<br><strong>Not live platform data</strong></span></div>
+        </div>
+
+        <div class="search-panel">
+          <div class="search-input-wrap"><i class="bi bi-search"></i><input id="foodSearch" type="search" placeholder="Search pizza, burger, biryani..." autocomplete="off"><kbd>⌘ K</kbd></div>
+          <div class="search-divider"></div>
+          <label class="category-select"><i class="bi bi-grid"></i><select id="categoryFilter" aria-label="Filter by food category"><option value="all">All categories</option><option value="Pizza">Pizza</option><option value="Burger">Burgers</option><option value="Biryani">Biryani</option><option value="South Indian">South Indian</option></select></label>
+          <button class="search-button" id="searchButton">Search deals <i class="bi bi-arrow-right"></i></button>
+        </div>
+        <div class="quick-search"><span>Popular:</span><button data-search="pizza">Pizza</button><button data-search="burger">Burger</button><button data-search="biryani">Biryani</button><button data-search="dosa">Dosa</button></div>
+
+        <div class="results-heading"><div><span class="results-kicker">YOUR COMPARISON</span><h3 id="resultsTitle">Popular food deals <span id="resultCount">4 items</span></h3></div><div class="results-controls"><label class="plan-switch-label" for="activePlan">Viewing as</label><select id="activePlan" aria-label="Choose demo plan"><option value="free">Free plan</option><option value="plus">FoodCompare Plus</option></select><div class="sort-wrap"><label for="sortSelect">Sort by</label><select id="sortSelect"><option value="recommended">Recommended</option><option value="low">Lowest price</option><option value="saving">Highest savings</option></select></div></div></div>
+        <div class="plan-notice free-notice" id="freeNotice"><div><i class="bi bi-lock-fill"></i><span><strong>Free plan: food prices + coupon comparison</strong><small>Delivery fees, platform fees, final bill and comparison history are part of Plus.</small></span></div><a href="#pricing" class="notice-upgrade">Unlock full comparison <i class="bi bi-arrow-right"></i></a></div>
+        <div class="plan-notice plus-notice" id="plusNotice" hidden><div><i class="bi bi-stars"></i><span><strong>FoodCompare Plus is active</strong><small>See the full bill breakdown, best final total and your saved comparison history.</small></span></div><span class="plus-active">PLUS ACTIVE</span></div>
+        <div class="food-grid" id="foodGrid" aria-live="polite"></div>
+        <section class="history-panel" id="historyPanel" hidden><div class="history-heading"><div><span class="results-kicker">YOUR ACTIVITY</span><h3>Comparison history</h3><p>Your recent Plus comparisons saved in this browser.</p></div><button type="button" id="clearHistory" class="clear-history">Clear history</button></div><div id="historyList" class="history-list"></div></section>
+        <div class="empty-state" id="emptyState" hidden><i class="bi bi-search"></i><h3>No matching food found</h3><p>Try another dish or choose a different category.</p><button class="button button-outline" id="clearSearch">Clear filters</button></div>
+        <div class="comparison-foot"><i class="bi bi-shield-check"></i> Prices shown are illustrative. Actual menu prices, offers and delivery fees may vary by address, account and time.</div>
+      </div>
+    </section>
+
+    <section class="how-section section" id="how">
+      <div class="container">
+        <div class="center-heading reveal"><div class="eyebrow">SAVING MADE SIMPLE</div><h2>Three steps to a <span>better deal.</span></h2><p>No more switching between apps just to check the price.</p></div>
+        <div class="steps-grid">
+          <article class="step-card reveal"><div class="step-number">01</div><div class="step-icon step-purple"><i class="bi bi-geo-alt"></i></div><h3>Set your location</h3><p>Use your current location or enter an area or pincode to find relevant options.</p><div class="step-art location-art"><i class="bi bi-geo-alt-fill"></i><span class="map-line"></span><span class="map-pin pin-one"></span><span class="map-pin pin-two"></span></div></article>
+          <article class="step-card reveal"><div class="step-number">02</div><div class="step-icon step-orange"><i class="bi bi-arrow-left-right"></i></div><h3>Compare the total</h3><p>Check menu prices, delivery charges, platform fees and available discounts side by side.</p><div class="step-art mini-compare"><div><b>App A</b><strong>₹249</strong></div><i class="bi bi-arrow-left-right"></i><div><b>App B</b><strong>₹219</strong></div></div></article>
+          <article class="step-card reveal"><div class="step-number">03</div><div class="step-icon step-green"><i class="bi bi-bag-check"></i></div><h3>Order your way</h3><p>Choose the deal you prefer and continue to the delivery platform to place your order.</p><div class="step-art order-art"><div class="order-check"><i class="bi bi-check-lg"></i></div><span>Best deal found!</span><i class="bi bi-arrow-up-right-circle-fill"></i></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="savings-section section" id="savings">
+      <div class="container savings-layout">
+        <div class="savings-copy reveal"><div class="eyebrow">WHY FOODCOMPARE?</div><h2>Small comparisons.<br><span>Real savings.</span></h2><p>The lowest menu price doesn't always mean the lowest bill. We make the full cost easier to understand so you can choose with confidence.</p><div class="benefit-list"><div><i class="bi bi-check-circle-fill"></i><span><strong>Compare final prices</strong><small>See fees and discounts together.</small></span></div><div><i class="bi bi-check-circle-fill"></i><span><strong>Spot better offers</strong><small>Understand which deal saves more.</small></span></div><div><i class="bi bi-check-circle-fill"></i><span><strong>Order on your chosen platform</strong><small>You stay in control of the purchase.</small></span></div></div></div>
+        <div class="savings-visual reveal"><div class="savings-card"><div class="savings-card-top"><span>YOUR SMART PICK</span><i class="bi bi-stars"></i></div><div class="savings-food"><img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?w=300&auto=format&fit=crop&q=80" alt="Delicious burger"><div><strong>Classic Veg Burger</strong><small>Example comparison</small></div></div><div class="savings-line"><span>Platform A total</span><del>₹249</del></div><div class="savings-line"><span>Platform B total</span><strong>₹199</strong></div><div class="savings-total"><span>Potential saving</span><strong>₹50</strong></div><div class="savings-badge"><i class="bi bi-check-circle-fill"></i> Better deal identified</div></div><div class="savings-deco deco-one">₹</div><div class="savings-deco deco-two"><i class="bi bi-tag-fill"></i></div></div>
+      </div>
+    </section>
+
+
+    <section class="pricing-section section" id="pricing">
+      <div class="container">
+        <div class="center-heading"><div class="eyebrow">SIMPLE, TRANSPARENT PRICING</div><h2>Start small. <span>Save more.</span></h2><p>Choose a simple plan for your food comparison needs.</p></div>
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <div class="plan-label">BASIC</div><h3>Free</h3><p>For checking food prices and available coupon offers.</p>
+            <div class="plan-price">₹0 <small>/ forever</small></div>
+            <a class="button button-outline" href="#contact" data-plan="free">Get started free</a>
+            <ul><li><i class="bi bi-check-circle-fill"></i> Compare food/menu prices</li><li><i class="bi bi-check-circle-fill"></i> Compare coupon codes and discounts</li><li><i class="bi bi-check-circle-fill"></i> See discounted food price</li><li class="plan-excluded"><i class="bi bi-lock-fill"></i> Delivery fee and platform fee comparison</li><li class="plan-excluded"><i class="bi bi-lock-fill"></i> Final payable bill and savings breakdown</li><li class="plan-excluded"><i class="bi bi-lock-fill"></i> Comparison history</li></ul>
+          </article>
+          <article class="pricing-card pricing-featured">
+            <span class="plan-popular">POPULAR</span><div class="plan-label">COMPLETE COMPARISON</div><h3>FoodCompare Plus</h3><p>For people who want to compare every charge before placing an order.</p>
+            <div class="plan-price">₹39 <small>/ month</small></div>
+            <a class="button button-dark" href="#contact" data-plan="plus">Choose Plus <i class="bi bi-arrow-right"></i></a>
+            <ul><li><i class="bi bi-check-circle-fill"></i> Everything in Free</li><li><i class="bi bi-check-circle-fill"></i> Compare delivery fees</li><li><i class="bi bi-check-circle-fill"></i> Compare platform fees and extra charges</li><li><i class="bi bi-check-circle-fill"></i> Full final bill breakdown across apps</li><li><i class="bi bi-check-circle-fill"></i> Best final price and total savings</li><li><i class="bi bi-check-circle-fill"></i> Personal comparison history</li></ul>
+          </article>
+        </div>
+        <p class="pricing-disclaimer">Illustrative plans for this assignment demo. No payment is collected.</p>
+      </div>
+    </section>
+
+    <section class="contact-section section" id="contact">
+      <div class="container contact-layout">
+        <div class="contact-copy"><div class="eyebrow">GET STARTED WITH FOODCOMPARE</div><h2>Ready to find your <span>better deal?</span></h2><p>Leave your details and tell us what you'd like to explore. This demo form shows a confirmation in your browser.</p><div class="contact-email"><i class="bi bi-envelope"></i> hello@foodcompare.example</div></div>
+        <form class="contact-form" id="contactForm" novalidate>
+          <h3>Request early access</h3>
+          <label for="contactName">Your name</label><input id="contactName" name="name" type="text" placeholder="Enter your name" required minlength="2">
+          <label for="contactEmail">Email address</label><input id="contactEmail" name="email" type="email" placeholder="you@example.com" required>
+          <label for="contactPlan">Plan you're interested in</label><select id="contactPlan" name="plan" required><option value="">Select a plan</option><option value="Free">Free plan</option><option value="FoodCompare Plus">FoodCompare Plus – ₹39/month</option></select>
+          <button class="button button-dark form-submit" type="submit">Submit request <i class="bi bi-arrow-right"></i></button>
+          <p class="contact-message" id="contactMessage" role="status" aria-live="polite"></p>
+          <small>This is a front-end demo. Your information is not sent to a server.</small>
+        </form>
+      </div>
+    </section>
+
+    <section class="cta-section"><div class="container cta-box reveal"><div><div class="eyebrow">READY TO COMPARE?</div><h2>Your next order deserves<br>a <span>better deal.</span></h2><p>Start with a food search and see the difference.</p></div><a href="#compare" class="button button-dark">Find my best deal <i class="bi bi-arrow-right"></i></a><div class="cta-decoration">🍟</div></div></section>
+  </main>
+
+  <footer class="footer"><div class="container footer-main"><div><a class="brand footer-brand" href="#top"><span class="brand-icon"><i class="bi bi-basket2-fill"></i></span>food<span>compare</span></a><p>Compare smarter. Order happier.</p></div><div class="footer-nav"><a href="#features">Features</a><a href="#compare">Compare prices</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></div><div class="footer-note">A front-end project concept.<br>Not affiliated with food delivery platforms.</div></div><div class="container footer-bottom"><span>© <span id="year"></span> FoodCompare. All rights reserved.</span><span>Made to help you save <i class="bi bi-heart-fill"></i></span></div></footer>
+
+  <!-- Location dialog -->
+  <div class="modal-backdrop" id="locationModal" hidden>
+    <div class="location-modal" role="dialog" aria-modal="true" aria-labelledby="locationTitle">
+      <button class="modal-close" id="closeLocation" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+      <div class="modal-icon"><i class="bi bi-geo-alt"></i></div>
+      <div class="eyebrow">PERSONALISE YOUR RESULTS</div><h2 id="locationTitle">Where should we look?</h2><p>Choose your delivery location to find relevant restaurants and offers.</p>
+      <button class="button button-dark location-detect" id="detectLocation"><i class="bi bi-crosshair"></i> Use my current location</button>
+      <div class="or-divider"><span>OR ENTER MANUALLY</span></div>
+      <label for="manualLocation">City, area or pincode</label><div class="manual-location"><i class="bi bi-search"></i><input id="manualLocation" type="text" placeholder="e.g. Anand, Gujarat or 388001"><button id="saveLocation">Apply</button></div>
+      <small class="location-help" id="locationHelp">Your browser will ask permission before sharing your location.</small>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
